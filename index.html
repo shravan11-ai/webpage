@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Interactive Webpage</title>
+    
+    <!-- CSS STYLING -->
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f2f5;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background-color: #ffffff;
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 450px;
+            width: 90%;
+        }
+
+        h1 {
+            color: #1a73e8;
+            margin-bottom: 1rem;
+            font-size: 2rem;
+        }
+
+        p {
+            color: #5f6368;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .btn {
+            background-color: #1a73e8;
+            color: white;
+            border: none;
+            padding: 0.8rem 2rem;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.2s ease, transform 0.1s ease;
+        }
+
+        .btn:hover {
+            background-color: #1557b0;
+        }
+
+        .btn:active {
+            transform: scale(0.98);
+        }
+
+        #message {
+            margin-top: 1.5rem;
+            font-weight: bold;
+            color: #34a853;
+            min-height: 24px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HTML CONTENT -->
+    <div class="container">
+        <h1>Welcome to My Website!</h1>
+        <p>This beautiful webpage includes structured layout, custom CSS styling, and simple interactive components all managed efficiently from one workspace in VS Code.</p>
+        
+        <button class="btn" id="actionBtn">Click Me!</button>
+        <div id="message"></div>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // Target the button and message elements
+        const button = document.getElementById('actionBtn');
+        const messageDiv = document.getElementById('message');
+
+        // Add a click interaction event
+        button.addEventListener('click', () => {
+            messageDiv.textContent = "🎉 It works! JavaScript is running perfectly.";
+            
+            // Optional: reset message after 3 seconds
+            setTimeout(() => {
+                messageDiv.textContent = "";
+            }, 3000);
+        });
+    </script>
+</body>
+</html>
